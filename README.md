@@ -1,6 +1,8 @@
 # CODSOFT
 A fully functional and beautiful Blog Application created using ReactJS on the front and NodeJS/ExpressJS on the back 🖤
+
 ![image](https://github.com/SardarIbrahim/CODSOFT/assets/61000944/b0e37387-c3b1-4dac-8b67-990cafb2ac3c)
+
 
 ## Details
 - It is a MERN stack application where users are able to post blogs, read them, create them, add comments and like the blogs and also delete the blog.
