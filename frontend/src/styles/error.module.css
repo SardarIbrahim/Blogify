@@ -1,0 +1,57 @@
+.flex__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  animation: fade infinite ease-out 3s;
+}
+
+.flex__container .text__center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.text__center h1 {
+  font-size: 10rem;
+  letter-spacing: 2rem;
+  animation: notFound infinite ease-in-out 2.5s;
+}
+
+.text__center h3 {
+  font-size: 2.5rem;
+}
+
+.text__center button {
+  background-color: #1e1e1e;
+  padding: 2rem;
+}
+
+@keyframes notFound {
+  45% {
+    transform: scale(1.3);
+  }
+
+  90% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes fade {
+  30% {
+    background-color: #1e1e1e;
+    color: white;
+  }
+
+  60% {
+    background-color: red;
+    color: white;
+  }
+
+  90% {
+    background-color: rgb(68, 68, 215);
+    color: white;
+  }
+}

@@ -1,0 +1,38 @@
+.singlePost__container {
+  padding: 1rem;
+}
+
+/* .singlePost__container #singlePost {
+  height: 50%;
+  width: 50%;
+  display: block;
+} */
+
+/* actions -> likes, comments logos */
+.singlePost__container .actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: white;
+  color: #1e1e1e;
+}
+
+/* comment form */
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 2rem;
+}
+.comment textarea {
+  outline: burlywood;
+  resize: none;
+  padding: 0.5rem;
+  line-height: 1.5;
+  overflow: hidden;
+}
+.comment #cmtImg {
+  width: 60px;
+  border-radius: 50%;
+}

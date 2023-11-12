@@ -1,0 +1,25 @@
+.commentList {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0rem;
+}
+
+.commentList .left__comment img {
+  border-radius: 50%;
+  width: 60px;
+}
+
+.commentList .right__comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.right__comment h1 {
+  font-size: 1.3rem;
+}

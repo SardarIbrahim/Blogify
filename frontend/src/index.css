@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Montserrat:wght@400;700&display=swap');
+
+/* resets */
+
+:root {
+  /* fonts optimization */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* defaults */
+
+/* toast */
+.toast__message {
+  font-size: 1.3rem;
+}
+
+.logo {
+  font-family: 'Lobster Two', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 8rem;
+}
+
+ul li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+
+  color: white;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s;
+}
+
+a:hover {
+  border-color: burlywood;
+}
+
+button {
+  padding: 1rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 1s;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+button:hover {
+  background-color: burlywood;
+}
+
+/* Root Layout Css */
+
+/* grid */
+.root__grid {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+
+  color: whitesmoke;
+  /* min-height: 100vh; */
+
+  position: relative;
+}
+
+/* left side */
+.left__grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  position: relative;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.left__grid h2 {
+  cursor: pointer;
+}
+
+.left__grid ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  transition: all 0.5s;
+}
+
+.left__grid ul a {
+  font-size: 2rem;
+  width: fit-content;
+  padding: 1rem;
+}
+
+.btn__logout {
+  margin-top: auto;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: fixed;
+  bottom: 3rem;
+  left: 6.5rem;
+}
+
+/* right grid */
+.right__grid {
+  color: #1e1e1e;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* search and avatar */
+.right__grid .searchbox {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.right__grid h1.latest {
+  display: inline-block;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid red;
+  border-image: linear-gradient(
+    0.25turn,
+    rgba(255, 249, 34),
+    rgba(255, 0, 128),
+    rgba(56, 2, 155, 0)
+  );
+  border-image-slice: 1;
+}
+
+.right__grid .searchbox input {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid burlywood;
+}
+
+.right__grid .searchbox img {
+  width: 6rem;
+  border-radius: 50%;
+}
+
+/* feed posts */
+.right__grid .feed__posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* card of post */
+.feed__posts .feed__card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 1rem;
+  height: auto;
+  position: relative;
+}
+
+.feed__card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* title of post */
+.feed__posts .feed__card h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 0.2rem solid sienna;
+}
+
+/* user and data */
+.feed__card .name__date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.feed__card .name__date h3 {
+  text-transform: uppercase;
+}
+
+/* readmore button */
+.feed__posts .read__more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* delete button */
+.feed__card .btn__delete {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+}
+
+/* Media queries specific */
+/* media queries */
+
+/* 990 and below */
+@media screen and (max-width: 990px) {
+  .btn__logout {
+    width: 13%;
+    left: 2.5rem;
+  }
+}
+
+/* tablets */
+@media screen and (max-width: 767px) {
+  /* left grid */
+  .left__grid {
+    padding: 1rem 5rem;
+  }
+
+  .left__grid ul a {
+    font-size: 1.5rem;
+    width: fit-content;
+  }
+
+  .btn__logout {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  /* right grid */
+
+  .right__grid {
+    overflow-x: hidden;
+  }
+
+  .right__grid .searchbox input {
+    padding: 0rem;
+    width: 100%;
+  }
+
+  .feed__posts .feed__card h2 {
+    font-size: 1.5rem;
+  }
+
+  .feed__card .name__date {
+    gap: 1rem;
+  }
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pagination button {
+  width: 40px;
+  height: 40px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #ddd;
+  color: #eee;
+  border-color: #eee;
+}
+
+.pagination button.active {
+  font-weight: 900;
+  border-color: #101010;
+  background: #ffe400;
+  color: #101010;
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  .left__grid {
+    grid-column: span 2;
+    min-height: 20%;
+    gap: 2rem;
+    transition: all 1s;
+  }
+
+  .left__grid ul,
+  button.btn__logout {
+    display: none;
+  }
+
+  .left__grid ul.show,
+  button.btn__logout.show {
+    display: flex;
+    flex-direction: row;
+  }
+
+  button.btn__logout.show {
+    width: 30%;
+    position: static;
+  }
+
+  .right__grid {
+    grid-column: span 2;
+  }
+
+  /* search box */
+
+  .right__grid .searchbox {
+    gap: 1.5rem;
+    width: 80%;
+  }
+
+  .right__grid .searchbox input {
+    padding: 1rem 0rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  button.btn__logout.show {
+    width: 40%;
+  }
+}
+
+/* Quill Editor */
+.ql-container.ql-snow {
+  height: auto;
+}
+.ql-editor {
+  height: 150px;
+  overflow-y: scroll;
+}
+
+/* general media queries */
+
+/* tablets */
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  .logo {
+    margin-bottom: 2rem;
+    font-size: 3.3rem;
+  }
+
+  .right__grid h1.latest {
+    font-size: 2rem;
+  }
+}

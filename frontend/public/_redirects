@@ -1,0 +1,4 @@
+/api/*  https://blogify-backend.cyclic.app/api/:splat  200
+/*    /index.html    200
+
+

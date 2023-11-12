@@ -1,0 +1,141 @@
+/* form container */
+.form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  width: 60%;
+  margin: auto;
+  padding: 3rem;
+  background-color: white;
+}
+
+.form__container h1 {
+  font-size: 3rem;
+  position: relative;
+  color: #1e1e1e;
+}
+.form__container h1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: burlywood;
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+/* form */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: none;
+  /* border-left: 1px solid #1e1e1e; */
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.form div label {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e1e1e;
+}
+
+.form div input {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+
+  border-bottom: 1px solid gainsboro;
+  width: 100%;
+}
+
+.form div .form__error {
+  color: red;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+}
+
+/* avatar and file input */
+.form div.avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  border: none;
+}
+
+/* file upload button */
+
+.form div.avatar input[type='file'] {
+  border: none;
+}
+
+.form div.avatar input[type='file']::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+div.avatar input[type='file']::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+div.avatar input[type='file']::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+
+@media screen and (max-width: 900px) {
+  .form__container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form__container h1 {
+    font-size: 2.3rem;
+  }
+
+  .form__container {
+    width: 100%;
+    padding: 1rem;
+  }
+  .form__container .form {
+    width: 100%;
+  }
+
+  .form div.avatar {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .form div.avatar input[type='file']::file-selector-button {
+    display: none;
+  }
+}

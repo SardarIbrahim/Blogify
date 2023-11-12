@@ -1,0 +1,123 @@
+.editor__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.editor__header .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.profile img {
+  width: 6rem;
+  border-radius: 50%;
+}
+
+/* Post Title Image */
+
+.postTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 40%;
+  position: relative;
+}
+
+.postTitle img {
+  display: block;
+  width: 50%;
+}
+
+/* fallback */
+.postTitle::before {
+  content: 'Upload an image 🖤';
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  background: burlywood;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 50%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Post Title */
+
+.title {
+  margin: 0 auto 2rem auto;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2.5rem;
+
+  /* breaking continued word */
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+.title input {
+  border: 2px dotted #e4e0e0;
+  outline: none;
+  padding: 1rem 1rem;
+  color: cadetblue;
+  width: 50%;
+}
+
+.title {
+  height: auto;
+}
+.title h1 {
+  max-width: 50%;
+  padding: 1rem;
+}
+
+/* media queries */
+@media screen and (max-width: 400px) {
+  .postTitle {
+    gap: 1rem;
+  }
+
+  .postTitle::before {
+    content: 'Upload an image 🖤';
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    background: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    right: 50%;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  .postTitle input {
+    margin-left: 0.5rem;
+  }
+
+  .postTitle img {
+    display: block;
+    width: 50%;
+    min-height: 50%;
+  }
+}
