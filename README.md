@@ -1,5 +1,5 @@
-# CODSOFT
-A fully functional and beautiful Blog Application created using ReactJS on the front and NodeJS/ExpressJS on the back 🖤
+# Blogify
+- A fully functional and beautiful Blog Application created using ReactJS on the front and NodeJS/ExpressJS on the back 🖤
 
 ![image](https://github.com/SardarIbrahim/CODSOFT/assets/61000944/b0e37387-c3b1-4dac-8b67-990cafb2ac3c)
 
